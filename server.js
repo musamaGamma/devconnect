@@ -8,9 +8,12 @@ const app = express()
 
 
 //middlewares
+app.use(express.json({extended: false}))
 if(process.env.NODE_ENV !== "production") {
     app.use(morgan("dev"))
 }
+
+
 
 
 //database config
